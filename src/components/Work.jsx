@@ -1,18 +1,44 @@
-import React from 'react'
+
+
 //motion
 import { motion } from 'framer-motion'
 //variants
 import { fadeIn } from '../variants'
-//img
-import Img1 from '../assets/portfolio-img1.png'
-import Img2 from '../assets/portfolio-img2.png'
-import Img3 from '../assets/portfolio-img3.png'
+
+// Project data array
+const projects = [
+  {
+    title: 'Aero Mart',
+    subtitle: 'E-commerce Website',
+    image:
+      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560863/portfolio-img1_ncte8t.png',
+    link: 'https://aero-mart.netlify.app/',
+  },
+  {
+    title: 'Book Store',
+    subtitle: 'Online Book Store',
+    image:
+      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560861/portfolio-img2_jijsyw.png',
+    link: 'https://exampleproject2.com',
+  },
+  {
+    title: 'Flavor Fusion',
+    subtitle: 'Online Food Store',
+    image:
+      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560865/portfolio-img3_xesns5.png',
+    link: 'https://exampleproject3.com',
+  },
+
+
+]
 
 const Work = () => {
   return (
-    <section className="section" id="work">
+    <section className="section my-56" id="work">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-x-10">
+        {/* <div className="flex flex-col lg:flex-row gap-x-10"> */}
+        <div className="flex flex-col lg:flex-col gap-x-10">
+          {/* Text Section */}
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial="hidden"
@@ -20,102 +46,63 @@ const Work = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-10 mb-10 lg:mb-0"
           >
-            {/* text */}
             <div>
               <h2 className="h2 leading-tight text-accent">
                 My Latest <br /> work
               </h2>
-              <p className="mx-w-sm mb-16">
+              <p className="max-w-sm mb-16">
                 Explore my latest projects, showcasing innovative designs and
                 development, focused on delivering responsive, scalable web
                 applications and solutions.
               </p>
               <button className="btn btn-sm">View all projects</button>
             </div>
-            {/* image */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
-              <a
-                href="https://aero-mart.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="group-hover:scale-125 transition-all duration-500"
-                  src={Img1}
-                  alt="Aero Mart Project"
-                />
-
-                {/* pretitle */}
-                <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                  <span className="text-gradient">E-commerce Website</span>
-                </div>
-                {/* title */}
-                <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">Aero Mart</span>
-                </div>
-              </a>
-            </div>
           </motion.div>
 
+          {/* Projects Section */}
+          {/* Projects Section */}
           <motion.div
             variants={fadeIn('left', 0.3)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-10"
+            className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12"
           >
-            {/* image 2 */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
+            {projects.map((project, index) => (
               <a
-                href="https://exampleproject2.com"
+                key={index}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="group relative overflow-hidden border-2 border-white/50 rounded-xl block"
               >
+                {/* Overlay */}
+                <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+
+                {/* Image */}
                 <img
-                  className="group-hover:scale-125 transition-all duration-500"
-                  src={Img2}
-                  alt="Project 2"
+                  className="group-hover:scale-125 transition-all duration-500 w-full h-full object-cover"
+                  src={project.image}
+                  alt={project.title}
                 />
+
+                {/* Subtitle */}
+                <div
+                  className="absolute left-12 z-50 
+      sm:-bottom-full sm:group-hover:bottom-24 bottom-24 transition-all duration-500"
+                >
+                  <span className="text-gradient">{project.subtitle}</span>
+                </div>
+
+                {/* Title */}
+                <div
+                  className="absolute left-12 z-50 
+      sm:-bottom-full sm:group-hover:bottom-14 bottom-14 transition-all duration-700"
+                >
+                  <span className="text-3xl text-white">{project.title}</span>
+                </div>
               </a>
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">Online Book Store</span>
-              </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Book Store</span>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-              {/* img */}
-              <a
-                href="https://exampleproject3.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="group-hover:scale-125 transition-all duration-500"
-                  src={Img3}
-                  alt="Project 3"
-                />
-              </a>
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">Online Food Store</span>
-              </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">Flavor Fusion</span>
-              </div>
-            </div>
+            ))}
           </motion.div>
         </div>
       </div>
