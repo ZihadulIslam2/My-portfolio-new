@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom"
 
 const Header = () => {
-  const homeLink = 'https://zihadulislam2.netlify.app/'
+  // const homeLink = 'https://zihadulislam2.netlify.app/'
   const inLink = 'https://www.linkedin.com/in/zihadulislam2/'
   return (
     <header className=" py-8 ">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* logo */}
-          <a href={homeLink}>
+          <Link to='/'>
             <span className="logo">Zihadul </span>
             Islam
-          </a>
+          </Link>
           {/* button */}
           <button className="btn btn-sm">
             {' '}

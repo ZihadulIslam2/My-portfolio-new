@@ -1,42 +1,36 @@
-
-
+import { useState, useEffect } from 'react'
 //motion
 import { motion } from 'framer-motion'
 //variants
 import { fadeIn } from '../variants'
 
-// Project data array
-const projects = [
-  {
-    title: 'Aero Mart',
-    subtitle: 'E-commerce Website',
-    image:
-      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560863/portfolio-img1_ncte8t.png',
-    link: 'https://aero-mart.netlify.app/',
-  },
-  {
-    title: 'Book Store',
-    subtitle: 'Online Book Store',
-    image:
-      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560861/portfolio-img2_jijsyw.png',
-    link: 'https://exampleproject2.com',
-  },
-  {
-    title: 'Flavor Fusion',
-    subtitle: 'Online Food Store',
-    image:
-      'https://res.cloudinary.com/dynsi60i4/image/upload/v1733560865/portfolio-img3_xesns5.png',
-    link: 'https://exampleproject3.com',
-  },
-
-
-]
-
 const Work = () => {
+  // State to store projects
+  const [projects, setProjects] = useState([])
+
+  // Fetch projects from the backend
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/portfolio/')
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const data = await response.json()
+        setProjects(data)
+        console.log(projects)
+
+      } catch (error) {
+        console.error('Error fetching projects:', error)
+      }
+    }
+
+    fetchProjects()
+  }, [])
+
   return (
     <section className="section my-56" id="work">
       <div className="container mx-auto">
-        {/* <div className="flex flex-col lg:flex-row gap-x-10"> */}
         <div className="flex flex-col lg:flex-col gap-x-10">
           {/* Text Section */}
           <motion.div
@@ -60,7 +54,6 @@ const Work = () => {
           </motion.div>
 
           {/* Projects Section */}
-          {/* Projects Section */}
           <motion.div
             variants={fadeIn('left', 0.3)}
             initial="hidden"
@@ -82,7 +75,7 @@ const Work = () => {
                 {/* Image */}
                 <img
                   className="group-hover:scale-125 transition-all duration-500 w-full h-full object-cover"
-                  src={project.image}
+                  src={project.imgLink} // Use imgLink from database
                   alt={project.title}
                 />
 

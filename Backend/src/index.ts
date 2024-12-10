@@ -8,21 +8,25 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3000
 
+// Middleware
 app.use(express.json())
 app.use(
   cors({
-    origin: ['http://localhost:5173'],
-    credentials: true,
+    origin: 'http://localhost:5173', // Allow requests from the React app
+    credentials: true, // Allow cookies if needed
   })
 )
 
+// Routes
 import PortfolioRoute from './routes/addNewPortfolio'
 app.use('/api/portfolio', PortfolioRoute)
 
+// Test Endpoint
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, Portfolio Backend!')
 })
 
+// Connect to MongoDB
 async function main() {
   try {
     await mongoose.connect(process.env.MONGO_URI as string)
@@ -34,6 +38,7 @@ async function main() {
 
 main()
 
+// Start the Server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 })

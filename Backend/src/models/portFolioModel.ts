@@ -13,6 +13,9 @@ const portfolioSchema = new mongoose.Schema(
     subtitle: {
       type: String,
     },
+    link: {
+      type: String,
+    },
   },
   { timestamps: true }
 )
