@@ -26,7 +26,6 @@ export const getAllData = async (req: Request, res: Response) => {
   }
 }
 
-
 // ----- returns object ----
 // export const getAllData = async (req: Request, res: Response) => {
 //   try {
@@ -44,17 +43,21 @@ export const getAllData = async (req: Request, res: Response) => {
 //   }
 // }
 
-export const deleteData = async (req: Request, res: Response) => {
-  const { id } = req.params // Extract id from route parameters
+export const deleteData = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  const { id } = req.params
 
   try {
-    const deletedData = await Portfolio.findByIdAndDelete(id) // Find and delete by _id
+    const deletedData = await Portfolio.findByIdAndDelete(id)
 
     if (!deletedData) {
-      return res.status(404).json({
+      res.status(404).json({
         success: false,
         mess: 'Portfolio not found',
       })
+      return
     }
 
     res.status(200).json({
@@ -71,8 +74,10 @@ export const deleteData = async (req: Request, res: Response) => {
   }
 }
 
-
-export const updateData = async (req: Request, res: Response) => {
+export const updateData = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
   const { id } = req.params // Extract id from route parameters
   const updateFields = req.body // Fields to be updated
 
@@ -84,10 +89,11 @@ export const updateData = async (req: Request, res: Response) => {
     )
 
     if (!updatedData) {
-      return res.status(404).json({
+      res.status(404).json({
         success: false,
         mess: 'Portfolio not found',
       })
+      return
     }
 
     res.status(200).json({
@@ -104,16 +110,20 @@ export const updateData = async (req: Request, res: Response) => {
   }
 }
 
-export const getSinglePortfolio = async (req: Request, res: Response) => {
+export const getSinglePortfolio = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
   try {
     const { id } = req.params // Extract the portfolio ID from the request parameters
     const portfolio = await Portfolio.findById(id) // Use the findById method to fetch the portfolio
 
     if (!portfolio) {
-      return res.status(404).json({
+      res.status(404).json({
         success: false,
         message: 'Portfolio not found',
       })
+      return
     }
 
     res.status(200).json({
