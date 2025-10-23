@@ -15,18 +15,21 @@ const AdminPage = () => {
   const onSubmit = async (data) => {
     console.log(data)
     try {
-      const response = await fetch('http://localhost:3000/api/portfolio/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          imgLink: data.imgLink,
-          title: data.title,
-          subtitle: data.subtitle,
-          link: data.link,
-        }),
-      })
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/portfolio/`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            imgLink: data.imgLink,
+            title: data.title,
+            subtitle: data.subtitle,
+            link: data.link,
+          }),
+        }
+      )
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)

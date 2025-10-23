@@ -7,7 +7,9 @@ const ManagePortfolio = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/portfolio/')
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/portfolio/`
+        )
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
@@ -25,7 +27,7 @@ const ManagePortfolio = () => {
   const handleDelete = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/portfolio/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/portfolio/${id}`,
         {
           method: 'DELETE',
         }

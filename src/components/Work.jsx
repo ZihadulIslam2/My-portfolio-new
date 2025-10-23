@@ -12,14 +12,15 @@ const Work = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/portfolio/')
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/portfolio/`
+        )
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
         const data = await response.json()
         setProjects(data)
         console.log(projects)
-
       } catch (error) {
         console.error('Error fetching projects:', error)
       }

@@ -22,7 +22,7 @@ const UpdatePortfolio = () => {
       setIsLoading(true) // Start loading
       try {
         const response = await fetch(
-          `http://localhost:3000/api/portfolio/${portfolioId}`
+          `${import.meta.env.VITE_API_URL}/api/portfolio/${portfolioId}`
         )
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
@@ -51,7 +51,7 @@ const UpdatePortfolio = () => {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/portfolio/${portfolioId}`,
+        `${import.meta.env.VITE_API_URL}/api/portfolio/${portfolioId}`,
         {
           method: 'PUT',
           headers: {
