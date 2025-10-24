@@ -1,10 +1,7 @@
-// import Images from '../assets/linkedin profile 001 without bg.png'
-// import Images from 'https://res.cloudinary.com/dynsi60i4/image/upload/v1733553328/linkedin_profile_001_without_bg_ofujjo.png'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-import { Link } from 'react-scroll'
 
 const Banner = () => {
   const links = {
