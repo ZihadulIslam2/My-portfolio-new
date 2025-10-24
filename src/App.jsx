@@ -12,6 +12,7 @@ import AdminPage from './pages/AdminPage' // Import the admin page component
 import ManagePortfolio from './pages/ManagePortfolio'
 import UpdatePortfolio from './pages/EditPortfolio'
 import Skills from './components/Skills'
+import Certifications from './components/Certifications'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
                 <Banner />
                 <About />
                 <Skills />
+                <Certifications/>
                 <Services />
                 <Work />
                 <Contact />
