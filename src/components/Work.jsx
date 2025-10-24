@@ -50,7 +50,7 @@ const Work = () => {
                 development, focused on delivering responsive, scalable web
                 applications and solutions.
               </p>
-              <button className="btn btn-sm">View all projects</button>
+              {/* <button className="btn btn-sm">View all projects</button> */}
             </div>
           </motion.div>
 

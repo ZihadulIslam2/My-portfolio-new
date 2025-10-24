@@ -65,17 +65,6 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-                <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start gap-4">
-                  <a
-                    href="#services"
-                    className="btn w-9 h-9 flex items-center justify-center"
-                  >
-                    <BsArrowUpRight />
-                  </a>
-                  <a href="#services" className="text-gradient text-sm">
-                    {service.link}
-                  </a>
-                </div>
               </div>
             ))}
           </motion.div>

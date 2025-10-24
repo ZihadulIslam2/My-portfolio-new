@@ -13,6 +13,9 @@ const Banner = () => {
     email: 'zihadul708@gmail.com',
   }
 
+  const myResumeLink =
+    'https://drive.google.com/file/d/1PW77VLwffR73auXTbb6OO2vfuxeCrlSA/view'
+
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center justify-center"
@@ -69,12 +72,14 @@ const Banner = () => {
                 <a href={`mailto:${links.email}`}>Contact me</a>
               </button>
               <button>
-                <Link
-                  to="work"
+                <a
+                  href={myResumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cursor-pointer text-gradient bln-link"
                 >
-                  My portfolio
-                </Link>
+                  View Resume →
+                </a>
               </button>
             </motion.div>
             {/* social */}

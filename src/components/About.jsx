@@ -89,7 +89,7 @@ const About = () => {
               <a href={`mailto:${links.email}`}>Contact me</a>
             </button>
             <a href="#" className="text-gradient btn-link">
-              My Portfolio
+              View Resume
             </a>
           </div>
         </motion.div>
