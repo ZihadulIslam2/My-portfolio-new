@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import AdminPage from './pages/AdminPage' // Import the admin page component
 import ManagePortfolio from './pages/ManagePortfolio'
 import UpdatePortfolio from './pages/EditPortfolio'
+import Skills from './components/Skills'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
               <>
                 <Banner />
                 <About />
+                <Skills />
                 <Services />
                 <Work />
                 <Contact />
