@@ -9,11 +9,12 @@ const About = () => {
     triggerOnce: true,
   })
 
-  const links = {
-    linkedin: 'https://www.linkedin.com/in/zihadulislam2/',
-    github: 'https://github.com/ZihadulIslam2',
-    email: 'zihadul708@gmail.com',
-  }
+  // const links = {
+  //   linkedin: 'https://www.linkedin.com/in/zihadulislam2/',
+  //   github: 'https://github.com/ZihadulIslam2',
+  //   email: 'zihadul708@gmail.com',
+  // }
+
   return (
     <section className="min-h-screen py-10 px-4" id="about" ref={ref}>
       <div className="container mx-auto">
@@ -82,15 +83,6 @@ const About = () => {
                 Clients
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <button className="btn btn-lg w-full">
-              <a href={`mailto:${links.email}`}>Contact me</a>
-            </button>
-            <a href="#" className="text-gradient btn-link">
-              View Resume
-            </a>
           </div>
         </motion.div>
       </div>

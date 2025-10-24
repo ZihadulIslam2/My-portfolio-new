@@ -65,19 +65,19 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto"
             >
-              <button className="btn btn-lg">
-                <a href={`mailto:${links.email}`}>Contact me</a>
-              </button>
-              <button>
-                <a
-                  href={myResumeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer text-gradient bln-link"
-                >
-                  View Resume →
-                </a>
-              </button>
+                  <button className="btn btn-lg">
+                    <a href={`mailto:${links.email}`}>Contact me</a>
+                  </button>
+                  <button>
+                    <a
+                      href={myResumeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer text-gradient bln-link"
+                    >
+                      View Resume →
+                    </a>
+                  </button>
             </motion.div>
             {/* social */}
             <motion.div
