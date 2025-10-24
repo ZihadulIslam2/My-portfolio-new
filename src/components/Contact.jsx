@@ -1,6 +1,4 @@
-//motion
 import { motion } from 'framer-motion'
-// variant
 import { fadeIn } from '../variants'
 
 const Contact = () => {
@@ -13,7 +11,7 @@ const Contact = () => {
             variants={fadeIn('right', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex-1 flex justify-start items-center "
           >
             <div>
@@ -21,7 +19,7 @@ const Contact = () => {
                 Get in touch
               </h4>
               <h2 className="text-[45px] lg:text-[90px] leading-none mb-12">
-                Let's work <br /> together!
+                Let&apos;s work <br /> together!
               </h2>
             </div>
           </motion.div>
@@ -30,7 +28,7 @@ const Contact = () => {
             variants={fadeIn('left', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
           >
             <input

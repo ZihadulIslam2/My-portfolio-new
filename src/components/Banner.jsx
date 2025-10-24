@@ -26,7 +26,7 @@ const Banner = () => {
               variants={fadeIn('up', 0.3)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: true, amount: 0.7 }}
               className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
             >
               Zihadul <span>Islam</span>
@@ -36,7 +36,7 @@ const Banner = () => {
               variants={fadeIn('up', 0.4)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: true, amount: 0.7 }}
               className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
             >
               <span className="text-white mr-4">I am a </span>
@@ -52,7 +52,7 @@ const Banner = () => {
               variants={fadeIn('up', 0.5)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: true, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto"
             >
               Passionate MERN stack developer creating efficient, scalable web
@@ -62,7 +62,7 @@ const Banner = () => {
               variants={fadeIn('up', 0.6)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: true, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto"
             >
               <button className="btn btn-lg">
@@ -82,7 +82,7 @@ const Banner = () => {
               variants={fadeIn('up', 0.7)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
+              viewport={{ once: true, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto"
             >
               <a href={links.linkedin}>
@@ -102,6 +102,7 @@ const Banner = () => {
             initial="hidden"
             whileInView="show"
             className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] mt-8 lg:mt-0"
+            viewport={{ once: true }}
           >
             <img
               src="https://res.cloudinary.com/dynsi60i4/image/upload/v1733553328/linkedin_profile_001_without_bg_ofujjo.png"

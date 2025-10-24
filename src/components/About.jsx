@@ -2,11 +2,11 @@ import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-// import AboutImg from '../assets/my photo.png'
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   })
 
   const links = {
@@ -21,7 +21,7 @@ const About = () => {
           variants={fadeIn('up', 0.3)}
           initial="hidden"
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-8"
         >
           <h2 className="text-3xl font-bold text-accent mb-4">ABOUT ME.</h2>
@@ -38,11 +38,11 @@ const About = () => {
           variants={fadeIn('up', 0.5)}
           initial="hidden"
           whileInView={'show'}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-center"
         >
           <h3 className="text-xl font-semibold mb-4">
-            I'm a MERN Stack Developer with 1+ years of experience.
+            I&apos;m a MERN Stack Developer with 1+ years of experience.
           </h3>
           <p className="mb-6 text-sm">
             Specializing in creating intuitive, high-performance web

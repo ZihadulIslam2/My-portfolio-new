@@ -38,7 +38,7 @@ const Work = () => {
             variants={fadeIn('right', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex-1 flex flex-col gap-y-10 mb-10 lg:mb-0"
           >
             <div>
@@ -59,7 +59,7 @@ const Work = () => {
             variants={fadeIn('left', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12"
           >
             {projects.map((project, index) => (

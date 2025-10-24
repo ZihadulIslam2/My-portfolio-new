@@ -1,4 +1,3 @@
-import React from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { fadeIn } from './../variants'
@@ -34,15 +33,15 @@ const Services = () => {
             variants={fadeIn('right', 0.3)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex-1  lg:bg-bottom bg-no-repeat mix-blend-lighten"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-accent mb-6">
               What I Do.
             </h2>
             <h3 className="text-xl md:text-2xl max-w-[455px] mb-8">
-              I'm a freelancer Front-end and back-end developer with one year of
-              experience.
+              I&apos;m a freelancer Front-end and back-end developer with one
+              year of experience.
             </h3>
             <button className="btn btn-sm">See my work</button>
           </motion.div>
@@ -51,7 +50,7 @@ const Services = () => {
             variants={fadeIn('left', 0.5)}
             initial="hidden"
             whileInView={'show'}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="flex-1"
           >
             {/* services list */}
