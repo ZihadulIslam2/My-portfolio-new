@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import contactRoute from './routes/contactMe.Route'
 
 dotenv.config()
 
@@ -20,6 +21,7 @@ app.use(
 // Routes
 import PortfolioRoute from './routes/addNewPortfolio'
 app.use('/api/portfolio', PortfolioRoute)
+app.use('/api', contactRoute)
 
 // Test Endpoint
 app.get('/', (req: Request, res: Response) => {
