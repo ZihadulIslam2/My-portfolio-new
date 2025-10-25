@@ -16,7 +16,7 @@ const About = () => {
   // }
 
   return (
-    <section className="min-h-screen/2 py-10 px-4" id="about" ref={ref}>
+    <section className="min-h-screen/2 py-10 px-4 my-32" id="about" ref={ref}>
       <div className="container mx-auto">
         <motion.div
           variants={fadeIn('up', 0.3)}
