@@ -73,7 +73,7 @@ const Certifications = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-[#111] rounded-2xl p-6 shadow-lg hover:shadow-accent/30 transition-all duration-300"
+              className="bg-[#200E40] rounded-2xl p-6 shadow-lg hover:shadow-accent/30 transition-all duration-300"
             >
               <h3 className="text-xl font-semibold text-gradient mb-2">
                 {cert.title}

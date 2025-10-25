@@ -69,9 +69,9 @@ const Skills = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-[#111] p-6 rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300"
+              className="bg-[#200E40] p-6 rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-gradient mb-4">
+              <h3 className="text-xl text-[#200E40] font-semibold text-gradient mb-4">
                 {title}
               </h3>
               <ul className="space-y-2 text-gray-300">
