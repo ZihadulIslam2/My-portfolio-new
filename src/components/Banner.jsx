@@ -39,9 +39,9 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
             >
-              <span className="text-white mr-4">I am a </span>
+              <span className="text-white mr-4">I am a</span>
               <TypeAnimation
-                sequence={['Developer', 2000, 'Designer', 2000]}
+                sequence={['Developer', 2000, 'Engineer', 2000]}
                 speed={50}
                 className="text-accent"
                 wrapper="span"
@@ -55,8 +55,9 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto"
             >
-              Passionate MERN stack developer creating efficient, scalable web
-              applications and enhancing user experiences every day.
+              Software developer with 1+ year of experience, skilled in web and
+              app development. I create efficient, scalable applications and
+              craft seamless user experiences.
             </motion.p>
             <motion.div
               variants={fadeIn('up', 0.6)}
@@ -65,19 +66,19 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto"
             >
-                  <button className="btn btn-lg">
-                    <a href={`mailto:${links.email}`}>Contact me</a>
-                  </button>
-                  <button>
-                    <a
-                      href={myResumeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cursor-pointer text-gradient bln-link"
-                    >
-                      View Resume →
-                    </a>
-                  </button>
+              <button className="btn btn-lg">
+                <a href={`mailto:${links.email}`}>Contact me</a>
+              </button>
+              <button>
+                <a
+                  href={myResumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer text-gradient bln-link"
+                >
+                  View Resume →
+                </a>
+              </button>
             </motion.div>
             {/* social */}
             <motion.div

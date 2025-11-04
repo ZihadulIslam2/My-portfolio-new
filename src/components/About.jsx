@@ -16,7 +16,11 @@ const About = () => {
   // }
 
   return (
-    <section className="min-h-screen/2 py-10 px-4 my-32" id="about" ref={ref}>
+    <section
+      className="min-h-screen/2 py-10 px-4 my-32 bg-transparent"
+      id="about"
+      ref={ref}
+    >
       <div className="container mx-auto">
         <motion.div
           variants={fadeIn('up', 0.3)}
@@ -43,16 +47,21 @@ const About = () => {
           className="text-center"
         >
           <h3 className="text-xl font-semibold mb-4">
-            I&apos;m a MERN Stack Developer with 1+ years of experience.
+            I&apos;m a Software developer with 1+ year of experience.
           </h3>
-          <p className="mb-6 text-sm">
-            Specializing in creating intuitive, high-performance web
-            applications, I focus on delivering seamless user experiences and
-            efficient back-end solutions, leveraging the power of modern web
-            technologies to solve complex problems.
+          <p className="mb-6 text-sm text-justify">
+            I am a software developer with 1+ year of experience, specializing
+            in building intuitive, high-performance web and mobile applications.
+            I focus on delivering seamless user experiences and efficient
+            back-end solutions, leveraging modern technologies to solve complex
+            problems. Passionate about clean code and scalable architecture, I
+            continuously explore new tools and frameworks to enhance
+            functionality and performance. Whether it&apos;s web or app
+            development, I strive to create products that are both impactful and
+            user-friendly.
           </p>
 
-          <div className="flex justify-around mb-8">
+          <div className="flex justify-around mb-8 pt-20">
             <div>
               <div className="text-3xl font-bold text-gradient mb-1">
                 {inView ? <CountUp start={0} end={1} duration={3} /> : null}

@@ -47,8 +47,8 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-transparent">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 md:py-32 ">
+      <div className="container mx-auto px-6 ">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Section (unchanged) */}
           <motion.div
