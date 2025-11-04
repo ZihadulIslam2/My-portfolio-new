@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <section
-      className="min-h-screen/2 py-10 px-4 my-32 bg-transparent"
+      className="min-h-screen/2 py-10 px-4 my-32 bg-cover bg-site"
       id="about"
       ref={ref}
     >

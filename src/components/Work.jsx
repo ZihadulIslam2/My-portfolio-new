@@ -23,7 +23,7 @@ const Work = () => {
   }, [])
 
   return (
-    <section className="section my-56" id="work">
+    <section className="section my-56 bg-site bg-cover" id="work">
       <div className="container mx-auto">
         <motion.div
           variants={fadeIn('right', 0.3)}
