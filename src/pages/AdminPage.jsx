@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { appwriteService } from '../services/appwriteService'
 
 const AdminPage = () => {
   const {
@@ -15,28 +16,12 @@ const AdminPage = () => {
   const onSubmit = async (data) => {
     console.log(data)
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/portfolio/`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            imgLink: data.imgLink,
-            title: data.title,
-            subtitle: data.subtitle,
-            link: data.link,
-          }),
-        }
-      )
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const result = await response.json()
-      console.log('Data posted successfully:', result)
+      const file = data.imgLink[0]; // Get the file object
+      await appwriteService.addProject({
+        title: data.title,
+        subtitle: data.subtitle,
+        link: data.link,
+      }, file);
 
       // Show success message
       setSuccessMessage('Portfolio added successfully!')
@@ -66,9 +51,9 @@ const AdminPage = () => {
             {/* Image Link */}
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder-white focus:border-accent transition-all"
-              type="text"
+              type="file"
               placeholder="Img Link"
-              {...register('imgLink', { required: 'Image link is required' })}
+              {...register('imgLink', { required: 'Image is required' })}
             />
             {errors.imgLink && <span>{errors.imgLink.message}</span>}
 

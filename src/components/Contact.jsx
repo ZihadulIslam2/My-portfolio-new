@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { Mail, Github, Linkedin } from 'lucide-react'
 import { useState } from 'react'
+import { appwriteService } from '../services/appwriteService'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -18,22 +19,13 @@ const Contact = () => {
     setStatus({ type: '', message: '' })
 
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/message/me`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        }
-      )
+      const result = await appwriteService.sendMessage(formData);
 
-      const data = await res.json()
-
-      if (data.success) {
-        setStatus({ type: 'success', message: data.message })
+      if (result.success) {
+        setStatus({ type: 'success', message: result.message })
         setFormData({ name: '', email: '', message: '' })
       } else {
-        setStatus({ type: 'error', message: data.message })
+        setStatus({ type: 'error', message: result.message })
       }
     } catch (error) {
       console.error('Error:', error)
@@ -152,11 +144,10 @@ const Contact = () => {
 
               {status.message && (
                 <p
-                  className={`mt-3 text-sm ${
-                    status.type === 'success'
+                  className={`mt-3 text-sm ${status.type === 'success'
                       ? 'text-green-400'
                       : 'text-red-400'
-                  }`}
+                    }`}
                 >
                   {status.message}
                 </p>

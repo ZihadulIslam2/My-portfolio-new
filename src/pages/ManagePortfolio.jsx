@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { appwriteService } from '../services/appwriteService'
 
 const ManagePortfolio = () => {
   const [projects, setProjects] = useState([])
@@ -7,13 +8,7 @@ const ManagePortfolio = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/portfolio/`
-        )
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        const data = await response.json()
+        const data = await appwriteService.getProjects()
         setProjects(data)
       } catch (error) {
         console.error('Error fetching projects:', error)
@@ -25,25 +20,18 @@ const ManagePortfolio = () => {
 
   // Delete a project
   const handleDelete = async (id) => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/portfolio/${id}`,
-        {
-          method: 'DELETE',
-        }
-      )
+    if (!window.confirm('Are you sure you want to delete this project?')) return;
 
-      if (response.ok) {
-        // Remove the deleted project from state
-        setProjects((prevProjects) =>
-          prevProjects.filter((project) => project._id !== id)
-        )
-        alert('Project deleted successfully')
-      } else {
-        throw new Error('Failed to delete the project')
-      }
+    try {
+      await appwriteService.deleteProject(id)
+      // Remove the deleted project from state
+      setProjects((prevProjects) =>
+        prevProjects.filter((project) => project.$id !== id)
+      )
+      alert('Project deleted successfully')
     } catch (error) {
       console.error('Error deleting project:', error)
+      alert('Failed to delete the project')
     }
   }
 
@@ -91,13 +79,13 @@ const ManagePortfolio = () => {
                 {/* Action Buttons */}
                 <div className="flex justify-between gap-5 mt-4 p-4">
                   <button
-                    onClick={() => handleEdit(project._id)}
+                    onClick={() => handleEdit(project.$id)}
                     className="btn btn-lg bg-blue-500 text-white hover:bg-blue-700"
                   >
                     Edit
                   </button>
                   <button
-                    onClick={() => handleDelete(project._id)}
+                    onClick={() => handleDelete(project.$id)}
                     className="btn btn-lg bg-red-500 text-white hover:bg-red-700"
                   >
                     Delete

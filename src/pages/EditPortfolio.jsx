@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { appwriteService } from '../services/appwriteService'
 
 const UpdatePortfolio = () => {
   const {
@@ -21,20 +22,15 @@ const UpdatePortfolio = () => {
     const fetchPortfolio = async () => {
       setIsLoading(true) // Start loading
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/portfolio/${portfolioId}`
-        )
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        const result = await response.json()
+        const result = await appwriteService.getProject(portfolioId)
 
-        // Assuming the portfolio data is under `result.data`
+        // Assuming the portfolio data is under `result`
         reset({
-          imgLink: result.data.imgLink,
-          title: result.data.title,
-          subtitle: result.data.subtitle,
-          link: result.data.link,
+          // imgLink is not pre-filled for file input, but we can show it if we want. 
+          // For now, we just populate text fields.
+          title: result.title,
+          subtitle: result.subtitle,
+          link: result.link,
         })
       } catch (error) {
         console.error('Error fetching portfolio data:', error)
@@ -50,23 +46,13 @@ const UpdatePortfolio = () => {
   // Update portfolio
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/portfolio/${portfolioId}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        }
-      )
+      const file = data.imgLink && data.imgLink.length > 0 ? data.imgLink[0] : null;
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const result = await response.json()
-      console.log('Portfolio updated successfully:', result)
+      await appwriteService.updateProject(portfolioId, {
+        title: data.title,
+        subtitle: data.subtitle,
+        link: data.link,
+      }, file);
 
       // Show success message
       setSuccessMessage('Portfolio updated successfully!')
@@ -97,12 +83,12 @@ const UpdatePortfolio = () => {
 
           <div className="w-100 border-white border-4 rounded-lg my-10">
             <form onSubmit={handleSubmit(onSubmit)}>
-              {/* Image Link */}
+              {/* Image Link (File Upload) */}
               <input
                 className="bg-transparent border-b py-3 outline-none w-full placeholder-white focus:border-accent transition-all"
-                type="text"
+                type="file"
                 placeholder="Img Link"
-                {...register('imgLink', { required: 'Image link is required' })}
+                {...register('imgLink', { required: false })} // Not required for update
               />
               {errors.imgLink && <span>{errors.imgLink.message}</span>}
 

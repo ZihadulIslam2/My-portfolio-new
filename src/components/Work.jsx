@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
+import { appwriteService } from '../services/appwriteService'
 
 const Work = () => {
   const [projects, setProjects] = useState([])
@@ -8,12 +9,7 @@ const Work = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/portfolio/`
-        )
-        if (!response.ok)
-          throw new Error(`HTTP error! status: ${response.status}`)
-        const data = await response.json()
+        const data = await appwriteService.getProjects()
         setProjects(data)
       } catch (error) {
         console.error('Error fetching projects:', error)
