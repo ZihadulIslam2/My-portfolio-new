@@ -20,7 +20,7 @@ import Blog from './components/Blog'
 const App = () => {
   return (
     <Router>
-      <div className="bg-[#050505] overflow-hidden">
+      <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
         <Header />
         <Nav />
 
