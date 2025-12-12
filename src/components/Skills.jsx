@@ -4,44 +4,29 @@ import { fadeIn } from '../variants'
 const skillsData = [
   {
     title: 'Programming Languages',
+    delay: 0.3,
+    items: ['JavaScript', 'TypeScript', 'Python', 'Dart', 'HTML / CSS'],
+  },
+  {
+    title: 'Frontend',
     delay: 0.4,
-    items: ['JavaScript', 'HTML / CSS', 'Python', 'TypeScript', 'Dart'],
+    items: ['React', 'Next.js', 'React Native', 'Tailwind CSS', 'Framer Motion'],
   },
   {
-    title: 'Frontend Development',
+    title: 'Backend',
     delay: 0.5,
-    items: ['React', 'React Native', 'Next.js', 'Tailwind CSS'],
+    items: ['Node.js', 'Express.js', 'Appwrite', 'Firebase', 'REST APIs'],
   },
   {
-    title: 'Backend Development',
+    title: 'Database & Tools',
     delay: 0.6,
-    items: ['Node.js', 'Express.js', 'Spring Boot', 'REST APIs'],
-  },
-  {
-    title: 'Databases',
-    delay: 0.7,
-    items: ['MongoDB', 'MySQL', 'PostgreSQL', 'Firebase'],
-  },
-  {
-    title: 'Tools & Technologies',
-    delay: 0.8,
-    items: ['Git', 'Agile / Scrum', 'Postman', 'VS Code'],
-  },
-  {
-    title: 'Design',
-    delay: 0.9,
-    items: [
-      'Figma',
-      'Adobe Illustrator',
-      'UI/UX Design',
-      'Wireframing & Prototyping',
-    ],
+    items: ['MongoDB', 'PostgreSQL', 'Git', 'Docker', 'Figma'],
   },
 ]
 
 const Skills = () => {
   return (
-    <section className="min-h-screen py-10 px-4" id="skills">
+    <section className="section relative z-10" id="skills">
       <div className="container mx-auto">
         {/* Heading */}
         <motion.div
@@ -49,19 +34,16 @@ const Skills = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-accent mb-4 uppercase">
-            Skills
-          </h2>
-          <p className="max-w-2xl mx-auto text-sm text-gray-300">
-            I&apos;ve worked with a range of technologies in the web development
-            world, from frontend to backend and everything in between.
+          <h2 className="h2 text-white mb-6">Skills & Tech Stack</h2>
+          <p className="max-w-2xl mx-auto text-white/60 text-lg">
+            A comprehensive overview of the technologies and tools I use to bring ideas to life.
           </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillsData.map(({ title, delay, items }, index) => (
             <motion.div
               key={index}
@@ -69,16 +51,21 @@ const Skills = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-[#200E40] p-6 rounded-2xl shadow-lg hover:shadow-accent/30 transition-all duration-300"
+              className="bg-[#111] border border-white/5 rounded-2xl p-6 hover:border-accent/50 transition-colors duration-300 group"
             >
-              <h3 className="text-xl font-semibold text-gradient mb-4">
+              <h3 className="text-xl font-bold text-white mb-6 group-hover:text-accent transition-colors">
                 {title}
               </h3>
-              <ul className="space-y-2 text-gray-300">
+              <div className="flex flex-wrap gap-3">
                 {items.map((skill, i) => (
-                  <li key={i}>{skill}</li>
+                  <span
+                    key={i}
+                    className="px-3 py-1.5 text-sm font-medium text-white/70 bg-white/5 rounded-lg border border-white/5 group-hover:bg-white/10 group-hover:text-white transition-all"
+                  >
+                    {skill}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>

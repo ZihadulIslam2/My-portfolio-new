@@ -5,19 +5,22 @@ import Banner from './components/Banner'
 import Header from './components/Header'
 import Nav from './components/Nav'
 import About from './components/About'
-import Services from './components/Services'
+// import Services from './components/Services' // Removed in favor of Experience
+import Experience from './components/Experience'
 import Work from './components/Work'
 import Contact from './components/Contact'
-import AdminPage from './pages/AdminPage' // Import the admin page component
+import AdminPage from './pages/AdminPage'
 import ManagePortfolio from './pages/ManagePortfolio'
 import UpdatePortfolio from './pages/EditPortfolio'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
+import Recommendations from './components/Recommendations'
+import Blog from './components/Blog'
 
 const App = () => {
   return (
     <Router>
-      <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
+      <div className="bg-[#050505] overflow-hidden">
         <Header />
         <Nav />
 
@@ -29,12 +32,15 @@ const App = () => {
             element={
               <>
                 <Banner />
-                <About />
-                <Skills />
-                <Certifications/>
-                <Services />
                 <Work />
+                <Skills />
+                <Experience />
+                <About />
+                <Recommendations />
                 <Contact />
+                <Blog />
+                {/* <Certifications/> */}
+                {/* <Services /> */}
               </>
             }
           />

@@ -9,91 +9,83 @@ const About = () => {
     triggerOnce: true,
   })
 
-  // const links = {
-  //   linkedin: 'https://www.linkedin.com/in/zihadulislam2/',
-  //   github: 'https://github.com/ZihadulIslam2',
-  //   email: 'zihadul708@gmail.com',
-  // }
-
   return (
-    <section
-      className="min-h-screen/2 py-10 px-4 my-32 bg-cover bg-site"
-      id="about"
-      ref={ref}
-    >
+    <section className="section relative z-10" id="about" ref={ref}>
       <div className="container mx-auto">
-        <motion.div
-          variants={fadeIn('up', 0.3)}
-          initial="hidden"
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.3 }}
-          className="text-center mb-8"
-        >
-          <h2 className="text-3xl font-bold text-accent mb-4">ABOUT ME.</h2>
-          <div className="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-full">
+        <div className="flex flex-col lg:flex-row gap-y-10 lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
+          {/* Image */}
+          <motion.div
+            variants={fadeIn('right', 0.3)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex-1 bg-about bg-contain bg-no-repeat h-[400px] mix-blend-lighten bg-top"
+          >
             <img
               src="https://res.cloudinary.com/dynsi60i4/image/upload/v1733553658/my_photo_m5z1be.png"
               alt="Profile"
-              className="w-full h-full object-cover flex-1   bg-no-repeat  mix-blend-lighten   "
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <motion.div
-          variants={fadeIn('up', 0.5)}
-          initial="hidden"
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.3 }}
-          className="text-center"
-        >
-          <h3 className="text-xl font-semibold mb-4">
-            I&apos;m a Software developer with 1+ year of experience.
-          </h3>
-          <p className="mb-6 text-sm text-justify">
-            I am a software developer with 1+ year of experience, specializing
-            in building intuitive, high-performance web and mobile applications.
-            I focus on delivering seamless user experiences and efficient
-            back-end solutions, leveraging modern technologies to solve complex
-            problems. Passionate about clean code and scalable architecture, I
-            continuously explore new tools and frameworks to enhance
-            functionality and performance. Whether it&apos;s web or app
-            development, I strive to create products that are both impactful and
-            user-friendly.
-          </p>
+          {/* Text */}
+          <motion.div
+            variants={fadeIn('left', 0.5)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex-1"
+          >
+            <h2 className="h2 text-accent">About me.</h2>
+            <h3 className="h3 mb-4">
+              I'm a Freelance Front-end Developer with over 1 year of experience.
+            </h3>
+            <p className="mb-6 text-white/60 text-lg leading-relaxed">
+              I specialize in building intuitive, high-performance web and mobile applications.
+              I focus on delivering seamless user experiences and efficient
+              back-end solutions, leveraging modern technologies to solve complex
+              problems. Passionate about clean code and scalable architecture.
+            </p>
 
-          <div className="flex justify-around mb-8 pt-20">
-            <div>
-              <div className="text-3xl font-bold text-gradient mb-1">
-                {inView ? <CountUp start={0} end={1} duration={3} /> : null}
+            {/* Stats */}
+            <div className="flex gap-x-6 lg:gap-x-10 mb-12">
+              <div>
+                <div className="text-[40px] font-tertiary text-gradient mb-2">
+                  {inView ? <CountUp start={0} end={1} duration={3} /> : null}
+                </div>
+                <div className="font-primary text-sm tracking-[2px]">
+                  Years of <br />
+                  Experience
+                </div>
               </div>
-              <div className="text-xs uppercase">
-                Years of
-                <br />
-                Experience
+              <div>
+                <div className="text-[40px] font-tertiary text-gradient mb-2">
+                  {inView ? <CountUp start={0} end={20} duration={3} /> : null}+
+                </div>
+                <div className="font-primary text-sm tracking-[2px]">
+                  Projects <br />
+                  Completed
+                </div>
+              </div>
+              <div>
+                <div className="text-[40px] font-tertiary text-gradient mb-2">
+                  {inView ? <CountUp start={0} end={5} duration={3} /> : null}+
+                </div>
+                <div className="font-primary text-sm tracking-[2px]">
+                  Satisfied <br />
+                  Clients
+                </div>
               </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-gradient mb-1">
-                {inView ? <CountUp start={0} end={20} duration={3} /> : null}+
-              </div>
-              <div className="text-xs uppercase">
-                Projects
-                <br />
-                Completed
-              </div>
+
+            <div className="flex gap-x-8 items-center">
+              <button className="btn btn-lg btn-accent">Contact me</button>
+              <a href="#" className="text-gradient btn-link">
+                My Portfolio
+              </a>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-gradient mb-1">
-                {inView ? <CountUp start={0} end={5} duration={3} /> : null}+
-              </div>
-              <div className="text-xs uppercase">
-                Satisfied
-                <br />
-                Clients
-              </div>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
