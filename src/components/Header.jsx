@@ -1,22 +1,42 @@
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-  // const homeLink = 'https://zihadulislam2.netlify.app/'
+  const [bg, setBg] = useState(false)
   const inLink = 'https://www.linkedin.com/in/zihadulislam2/'
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setBg(true)
+      } else {
+        setBg(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <header className=" py-8 ">
+    <header
+      className={`${bg ? 'bg-black/50 backdrop-blur-lg py-4 shadow-lg' : 'bg-transparent py-8'
+        } fixed top-0 w-full z-50 transition-all duration-300`}
+    >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* logo */}
-          <Link to='/'>
-            <span className="logo">Zihadul </span>
-            Islam
+          <Link to="/">
+            <h1 className="text-2xl font-bold font-primary">
+              <span className="text-gradient">Zihadul</span>{' '}
+              <span className="text-white">Islam</span>
+            </h1>
           </Link>
           {/* button */}
-          <button className="btn btn-sm">
-            {' '}
-            <a href={inLink}>work with me</a>
-          </button>
+          <a href={inLink} target="_blank" rel="noreferrer">
+            <button className="btn btn-sm btn-accent">Work with me</button>
+          </a>
         </div>
       </div>
     </header>
