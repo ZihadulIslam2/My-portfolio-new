@@ -22,7 +22,7 @@ const About = () => {
             className="flex-1 bg-about bg-contain bg-no-repeat h-[400px] mix-blend-lighten bg-top"
           >
             <img
-              src="https://res.cloudinary.com/dynsi60i4/image/upload/v1733553658/my_photo_m5z1be.png"
+              src="https://res.cloudinary.com/ddtuyxcsl/image/upload/v1766172757/My_Image_1_dlqvc2.jpg"
               alt="Profile"
               className="w-full h-full object-contain drop-shadow-2xl"
             />
@@ -38,13 +38,15 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a Freelance Front-end Developer with over 1 year of experience.
+              I'm a Freelance Front-end Developer with over 1 year of
+              experience.
             </h3>
             <p className="mb-6 text-white/60 text-lg leading-relaxed">
-              I specialize in building intuitive, high-performance web and mobile applications.
-              I focus on delivering seamless user experiences and efficient
-              back-end solutions, leveraging modern technologies to solve complex
-              problems. Passionate about clean code and scalable architecture.
+              I specialize in building intuitive, high-performance web and
+              mobile applications. I focus on delivering seamless user
+              experiences and efficient back-end solutions, leveraging modern
+              technologies to solve complex problems. Passionate about clean
+              code and scalable architecture.
             </p>
 
             {/* Stats */}

@@ -38,7 +38,8 @@ const Skills = () => {
         >
           <h2 className="h2 text-white mb-6">Skills & Tech Stack</h2>
           <p className="max-w-2xl mx-auto text-white/60 text-lg">
-            A comprehensive overview of the technologies and tools I use to bring ideas to life.
+            A comprehensive overview of the technologies and tools I use to
+            bring ideas to life.
           </p>
         </motion.div>
 
@@ -51,7 +52,7 @@ const Skills = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-[#111] border border-white/5 rounded-2xl p-6 hover:border-accent/50 transition-colors duration-300 group"
+              className="bg-[#1A0B33]/60 backdrop-blur-xl border border-white/5 rounded-2xl p-6 hover:border-accent/50 transition-colors duration-300 group"
             >
               <h3 className="text-xl font-bold text-white mb-6 group-hover:text-accent transition-colors">
                 {title}

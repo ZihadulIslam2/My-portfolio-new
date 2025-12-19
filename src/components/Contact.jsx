@@ -54,8 +54,8 @@ const Contact = () => {
               Get in touch
             </h4>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-white">
-              Let&apos;s <span className="text-gradient-accent">work</span> <br />{' '}
-              together!
+              Let&apos;s <span className="text-gradient-accent">work</span>{' '}
+              <br /> together!
             </h2>
             <p className="text-white/60 text-lg max-w-md mb-12 leading-relaxed">
               I&apos;m always open to discussing new projects, creative ideas,
@@ -71,7 +71,10 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Mail className="text-white group-hover:text-black transition-colors" size={24} />
+                <Mail
+                  className="text-white group-hover:text-black transition-colors"
+                  size={24}
+                />
               </a>
               <a
                 href="https://github.com/ZihadulIslam2"
@@ -79,7 +82,10 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github className="text-white group-hover:text-black transition-colors" size={24} />
+                <Github
+                  className="text-white group-hover:text-black transition-colors"
+                  size={24}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/zihadulislam2/"
@@ -87,7 +93,10 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin className="text-white group-hover:text-black transition-colors" size={24} />
+                <Linkedin
+                  className="text-white group-hover:text-black transition-colors"
+                  size={24}
+                />
               </a>
             </div>
           </motion.div>
@@ -99,7 +108,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="flex-1 w-full bg-[#111] border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl hover:border-white/10 transition-all duration-500"
+            className="flex-1 w-full bg-[#1A0B33]/60   backdrop-blur-xl border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl hover:border-white/10 transition-all duration-500"
           >
             <h3 className="text-2xl font-bold mb-8 text-white">
               Send me a message
@@ -143,10 +152,11 @@ const Contact = () => {
 
               {status.message && (
                 <p
-                  className={`mt-2 text-sm font-medium ${status.type === 'success'
-                    ? 'text-green-400'
-                    : 'text-red-400'
-                    }`}
+                  className={`mt-2 text-sm font-medium ${
+                    status.type === 'success'
+                      ? 'text-green-400'
+                      : 'text-red-400'
+                  }`}
                 >
                   {status.message}
                 </p>
