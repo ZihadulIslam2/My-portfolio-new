@@ -38,8 +38,7 @@ const About = () => {
           >
             <h2 className="h2 text-accent">About me.</h2>
             <h3 className="h3 mb-4">
-              I'm a Freelance Front-end Developer with over 1 year of
-              experience.
+              I'm a Full Stack Developer with over 1.5 year of experience.
             </h3>
             <p className="mb-6 text-white/60 text-lg leading-relaxed">
               I specialize in building intuitive, high-performance web and
@@ -71,7 +70,7 @@ const About = () => {
               </div>
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {inView ? <CountUp start={0} end={5} duration={3} /> : null}+
+                  {inView ? <CountUp start={0} end={15} duration={3} /> : null}+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Satisfied <br />

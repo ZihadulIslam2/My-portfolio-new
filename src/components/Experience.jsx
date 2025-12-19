@@ -3,19 +3,26 @@ import { fadeIn } from '../variants'
 
 const experienceData = [
   {
-    company: 'Tech Solutions Inc.',
-    role: 'Frontend Developer',
-    period: '2023 - Present',
-    description:
-      'Leading the frontend development of core products using React and Next.js. Improved site performance by 40% and implemented a new design system.',
+    company: 'ScaleUp IT LTD',
+    role: 'Backend Developer',
+    period: '2024 - Present',
+    description: `Key Responsibilities:
+
+Developed and maintained backend services using Node.js, Express.js, and MongoDB
+
+Designed and implemented RESTful APIs with a focus on scalability, security, and performance
+
+Integrated payment gateways including Stripe and PayPal for seamless transaction processing
+
+Built real-time features such as live chat and notification systems using Socket.io`,
   },
-  {
-    company: 'Creative Agency',
-    role: 'Web Developer Intern',
-    period: '2022 - 2023',
-    description:
-      'Collaborated with designers to translate Figma mockups into responsive web pages. Built interactive components using JavaScript and Tailwind CSS.',
-  },
+  // {
+  //   company: 'Creative Agency',
+  //   role: 'Web Developer Intern',
+  //   period: '2022 - 2023',
+  //   description:
+  //     'Collaborated with designers to translate Figma mockups into responsive web pages. Built interactive components using JavaScript and Tailwind CSS.',
+  // },
 ]
 
 const Experience = () => {

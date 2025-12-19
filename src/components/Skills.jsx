@@ -10,17 +10,17 @@ const skillsData = [
   {
     title: 'Frontend',
     delay: 0.4,
-    items: ['React', 'Next.js', 'React Native', 'Tailwind CSS', 'Framer Motion'],
+    items: ['React', 'Next.js', 'React Native', 'Tailwind CSS', 'Framer Motion', 'Flutter'],
   },
   {
     title: 'Backend',
     delay: 0.5,
-    items: ['Node.js', 'Express.js', 'Appwrite', 'Firebase', 'REST APIs'],
+    items: ['Node.js', 'Express.js', 'Appwrite', 'Firebase', 'REST APIs', 'Fast'],
   },
   {
     title: 'Database & Tools',
     delay: 0.6,
-    items: ['MongoDB', 'PostgreSQL', 'Git', 'Docker', 'Figma'],
+    items: ['MongoDB', 'PostgreSQL', 'Git', 'Docker'],
   },
 ]
 
