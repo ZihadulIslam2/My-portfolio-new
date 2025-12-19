@@ -79,7 +79,9 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="mb-10 max-w-lg mx-auto lg:mx-0 text-white/60 text-lg leading-relaxed"
             >
-              Software developer with 1+ year of experience. I create efficient, scalable applications and craft seamless user experiences using modern technologies.
+              Software developer with 1+ year of experience. I create efficient,
+              scalable applications and craft seamless user experiences using
+              modern technologies.
             </motion.p>
 
             <motion.div
@@ -110,13 +112,22 @@ const Banner = () => {
               viewport={{ once: true, amount: 0.7 }}
               className="flex text-[24px] gap-x-8 max-w-max mx-auto lg:mx-0"
             >
-              <a href={links.linkedin} className="text-white/60 hover:text-accent transition-colors">
+              <a
+                href={links.linkedin}
+                className="text-white/60 hover:text-accent transition-colors"
+              >
                 <FaLinkedin />
               </a>
-              <a href={links.github} className="text-white/60 hover:text-accent transition-colors">
+              <a
+                href={links.github}
+                className="text-white/60 hover:text-accent transition-colors"
+              >
                 <FaGithub />
               </a>
-              <a href={`mailto:${links.email}`} className="text-white/60 hover:text-accent transition-colors">
+              <a
+                href={`mailto:${links.email}`}
+                className="text-white/60 hover:text-accent transition-colors"
+              >
                 <FaEnvelope />
               </a>
             </motion.div>
@@ -133,7 +144,7 @@ const Banner = () => {
             {/* Image Glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-secondary/20 rounded-full blur-[80px] -z-10" />
             <img
-              src="https://res.cloudinary.com/dynsi60i4/image/upload/v1733553328/linkedin_profile_001_without_bg_ofujjo.png"
+              src="https://res.cloudinary.com/ddtuyxcsl/image/upload/v1766186976/IMG_20251219_082121_rlanj9.png"
               alt="Zihadul Islam"
               className="w-full h-full object-contain drop-shadow-2xl"
             />
