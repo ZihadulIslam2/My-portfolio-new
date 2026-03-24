@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "subtitle": "A full-featured e-commerce platform with cart management and payment integration",
+    "imgLink": "https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=500&h=300&fit=crop",
+    "link": "https://example-ecommerce.com",
+    "techStack": ["React", "Node.js", "MongoDB", "Stripe"]
+  },
+  {
+    "id": 2,
+    "title": "Project Management App",
+    "subtitle": "Collaborative task management tool with real-time updates and team features",
+    "imgLink": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
+    "link": "https://example-projectmgmt.com",
+    "techStack": ["React", "Firebase", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    "id": 3,
+    "title": "Social Media Analytics",
+    "subtitle": "Dashboard for tracking social media metrics and engagement analytics",
+    "imgLink": "https://images.unsplash.com/photo-1611332833631-a47da1c91840?w=500&h=300&fit=crop",
+    "link": "https://example-analytics.com",
+    "techStack": ["Vue.js", "Python", "PostgreSQL", "Chart.js"]
+  },
+  {
+    "id": 4,
+    "title": "Weather Forecast App",
+    "subtitle": "Real-time weather data with interactive maps and detailed forecasts",
+    "imgLink": "https://images.unsplash.com/photo-1563629810-5d16f8b1e00b?w=500&h=300&fit=crop",
+    "link": "https://example-weather.com",
+    "techStack": ["React", "OpenWeather API", "Leaflet", "Axios"]
+  },
+  {
+    "id": 5,
+    "title": "Fitness Tracking Platform",
+    "subtitle": "Comprehensive fitness tracking with workout plans and progress monitoring",
+    "imgLink": "https://images.unsplash.com/photo-1521231991290-7ba6b6822bbb?w=500&h=300&fit=crop",
+    "link": "https://example-fitness.com",
+    "techStack": ["React Native", "Firebase", "Chart.js", "Redux"]
+  },
+  {
+    "id": 6,
+    "title": "Content Management System",
+    "subtitle": "Headless CMS for managing content with a powerful API",
+    "imgLink": "https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=500&h=300&fit=crop",
+    "link": "https://example-cms.com",
+    "techStack": ["Next.js", "Appwrite", "Tailwind CSS", "GraphQL"]
+  }
+]

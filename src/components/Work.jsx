@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { appwriteService } from '../services/appwriteService'
+import projectsData from '../data/projects.json'
 
 const Work = () => {
   const [projects, setProjects] = useState([])
@@ -9,10 +10,14 @@ const Work = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
+        // Fetch projects from Appwrite database
         const data = await appwriteService.getProjects()
-        setProjects(data)
+        // If no data from Appwrite, fall back to local JSON data
+        setProjects(data && data.length > 0 ? data : projectsData)
       } catch (error) {
-        console.error('Error fetching projects:', error)
+        // On error, use fallback JSON data for better UX
+        console.error('Error fetching projects from Appwrite:', error)
+        setProjects(projectsData)
       }
     }
     fetchProjects()
@@ -21,6 +26,7 @@ const Work = () => {
   return (
     <section className="section relative z-10" id="work">
       <div className="container mx-auto">
+        {/* Featured Projects Section Header */}
         <motion.div
           variants={fadeIn('up', 0.3)}
           initial="hidden"
@@ -35,12 +41,12 @@ const Work = () => {
           </p>
         </motion.div>
 
-        {/* Project Grid */}
+        {/* Project Grid - Maps through Appwrite projects or fallback JSON data */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
-              key={index}
-              variants={fadeIn('up', 0.3 + index * 0.1)}
+              key={project.id}
+              variants={fadeIn('up', 0.3)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.1 }}
@@ -52,7 +58,7 @@ const Work = () => {
                 rel="noopener noreferrer"
                 className="block h-full bg-[#1A0B33]/60   backdrop-blur-xl  border border-white/5 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hover:-translate-y-2"
               >
-                {/* Image Container */}
+                {/* Project Image Container with gradient overlay */}
                 <div className="relative h-[240px] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A0B33]/60 to-transparent z-10 opacity-60" />
                   <img
@@ -62,7 +68,7 @@ const Work = () => {
                   />
                 </div>
 
-                {/* Content */}
+                {/* Project Content - Title, Description, Tech Stack */}
                 <div className="p-6 relative z-20 -mt-12">
                   <div className="bg-[#1A0B33]/80 backdrop-blur-md border border-white/5 p-4 rounded-xl">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
@@ -72,12 +78,12 @@ const Work = () => {
                       {project.subtitle}
                     </p>
 
-                    {/* Tech Stack */}
+                    {/* Tech Stack Tags */}
                     {project.techStack && (
                       <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech, i) => (
+                        {project.techStack.map((tech) => (
                           <span
-                            key={i}
+                            key={tech}
                             className="text-[10px] uppercase tracking-wider font-medium px-2 py-1 rounded-md bg-white/5 text-white/80 border border-white/5"
                           >
                             {tech}
@@ -88,8 +94,6 @@ const Work = () => {
                   </div>
                 </div>
               </a>
-
-              
             </motion.div>
           ))}
         </div>
