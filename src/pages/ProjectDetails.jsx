@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useNavigate, useParams } from 'react-router-dom'
 import { fadeIn } from '../variants'
+import { useProjectSchema } from '../hooks/useSEOSchema'
 import projectsData from '../data/projects_v2.json'
 
 const ProjectDetails = () => {
@@ -9,6 +10,9 @@ const ProjectDetails = () => {
 
   const decodedTitle = projectTitle ? decodeURIComponent(projectTitle) : ''
   const project = projectsData.find((item) => item.title === decodedTitle)
+
+  // Add schema.org structured data for this project
+  useProjectSchema(project)
 
   if (!project) {
     return (

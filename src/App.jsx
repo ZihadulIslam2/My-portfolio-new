@@ -17,7 +17,12 @@ import Skills from './components/Skills'
 import Recommendations from './components/Recommendations'
 import Blog from './components/Blog'
 
+// SEO Hook
+import { useSEOSchema } from './hooks/useSEOSchema'
+
 const App = () => {
+  // Add schema.org structured data for homepage
+  useSEOSchema()
   return (
     <Router>
       <div className="bg-site bg-no-repeat bg-cover overflow-hidden">
