@@ -45,7 +45,7 @@ const Work = () => {
                   <img
                     src={project.webImage}
                     alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                 </div>
 
