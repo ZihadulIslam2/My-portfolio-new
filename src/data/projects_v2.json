@@ -1,0 +1,147 @@
+[
+  {
+    "title": "Multi-Sector Booking Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778855131/screencapture-bookersi-2026-05-15-20_20_42_nsipvd.png",
+    "description": "This custom offer covers Phase 1 of the project, focused on building the complete system foundation, scalable backend architecture, booking workflow, and professional UI/UX design for a multi-sector booking platform. The platform supports industries such as Beauty, Fitness, and Wellness through a modular and scalable architecture. The project includes responsive dashboard design, business onboarding workflows, booking management, staff management, notification systems, and secure role-based access control. The system is developed with future scalability in mind, including a payment-ready structure for subscriptions and commissions.",
+    "technologies": [],
+    "features": [
+      "Professional UI/UX design for Admin, Business, Staff, and Client dashboards",
+      "Fully responsive design for mobile, tablet, and desktop",
+      "Modular multi-sector architecture for Beauty, Fitness, and Wellness",
+      "Business onboarding and admin verification workflow",
+      "Service management with custom durations and dynamic pricing",
+      "Staff management and service assignment system",
+      "Real-time booking calendar and availability management",
+      "Complete booking workflow",
+      "E-mail and SMS notification system",
+      "Secure role-based authentication and access control",
+      "Scalable REST API and database architecture",
+      "Payment-ready backend structure for subscriptions and commissions",
+      "Clean and maintainable development architecture"
+    ],
+    "demoLinks": ["https://bookersi.com/"],
+    "githubLinks": []
+  },
+  {
+    "title": "HierroMarket Custom eCommerce Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778855592/screencapture-hierroamedida-2026-05-15-20_32_17_wz8y5n.png",
+    "description": "HierroMarket is a modern eCommerce platform for the online sale of iron and steel products including sheets, bars, tubes, profiles, plates, and coils, along with industrial services such as cut-to-size and bending. The platform is designed for both B2C and scalable B2B operations with a modern industrial UI, configurable product options, advanced pricing logic, and SEO optimization.",
+    "technologies": [],
+    "features": [
+      "Industrial and modern responsive design",
+      "Conversion-focused homepage with trust sections and CTAs",
+      "Advanced product catalog management",
+      "Product variants and custom configurators",
+      "Cut-to-size and bending service integration",
+      "Dynamic pricing engine using Excel-based formulas",
+      "Automated shipping logic based on weight and size",
+      "Guest checkout and multiple payment methods",
+      "VAT-inclusive pricing and invoice generation",
+      "Technical SEO optimization",
+      "GA4 and GTM integration",
+      "GDPR compliance and security integrations",
+      "Multi-language readiness"
+    ],
+    "demoLinks": ["https://hierroamedida.com/"],
+    "githubLinks": []
+  },
+  {
+    "title": "Board Games E-Commerce Website & Dynamic QR Code Integration",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778855960/screencapture-doundogames-2026-05-15-20_38_55_vgskmy.png",
+    "description": "A modern and scalable e-commerce platform for board games and merchandise featuring dynamic QR code integration for product tracking and marketing. The platform is designed to support future expansion with secure payment systems, SEO optimization, CMS pages, and a mobile-first responsive experience.",
+    "technologies": [],
+    "features": [
+      "Product catalog with expandable product categories",
+      "Dynamic QR code generation and management",
+      "QR codes with editable destination URLs",
+      "Shopping cart and secure checkout",
+      "Stripe and PayPal payment integration",
+      "Product search and filtering",
+      "User authentication and order history",
+      "CMS-enabled blog and policy pages",
+      "Responsive mobile-first design",
+      "SEO-friendly architecture",
+      "Optimized performance and SSL security",
+      "Scalable architecture for future expansion"
+    ],
+    "demoLinks": ["https://doundogames.com/"],
+    "githubLinks": []
+  },
+  {
+    "title": "Live Event Audience Interaction Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778926433/screencapture-lfstactivation-cloud-2026-05-16-16_12_01_luvai2.png",
+    "description": "A live event interaction platform that enables parents and audiences to submit real-time quotes, reactions, and photos through QR code access. Approved submissions are displayed dynamically on large event screens, creating an interactive and family-friendly audience experience.",
+    "technologies": [],
+    "features": [
+      "QR code-based submission access",
+      "Real-time quote and photo submissions",
+      "Dynamic live feed display on large screens",
+      "Moderation dashboard for content approval",
+      "Backend storage and media management",
+      "Post-event social media integration",
+      "Mobile and desktop optimized interface",
+      "Secure and family-friendly content workflow"
+    ],
+    "demoLinks": ["https://companionpayhq.com/"],
+    "githubLinks": []
+  },
+  {
+    "title": "B2B2C Fundraising Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778938592/screencapture-merchraiser-2026-05-16-19_36_02_czjlxn.png",
+    "description": "A scalable B2B2C fundraising platform designed for organizations to manage fundraising campaigns with integrated e-commerce functionality. The platform includes customer storefronts, organization dashboards, and internal admin systems with secure payment integrations and campaign management tools.",
+    "technologies": [],
+    "features": [
+      "Customer-facing fundraising storefront",
+      "Campaign pages with product galleries",
+      "Donation and product purchase system",
+      "Shopping cart and secure checkout",
+      "Stripe and PayPal integration",
+      "Organization dashboard with campaign analytics",
+      "Internal admin dashboard with CRUD management",
+      "Fund allocation and tracking system",
+      "Role-based authentication and access control",
+      "Scalable API integrations and backend architecture",
+      "Responsive design for all devices"
+    ],
+    "demoLinks": ["https://www.merchraiser.com/"],
+    "githubLinks": []
+  },
+  {
+    "title": "Open Water Diver Booking Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778938931/screencapture-scubalife-net-2026-05-16-19_41_52_bg4tgy.png",
+    "description": "A scuba diving course booking and management platform featuring secure payments, scheduling, messaging, analytics, e-commerce integration, and online waiver management. The system is designed for both customers and administrators with responsive dashboards and automation tools.",
+    "technologies": [],
+    "features": [
+      "User account creation and profile management",
+      "Scuba course browsing and booking",
+      "Secure online payment integration",
+      "Interactive booking calendar",
+      "Messaging system with auto-replies",
+      "User dashboard for booking management",
+      "E-mail and SMS notifications",
+      "Admin panel for course management",
+      "Participant limits and scheduling management",
+      "Optional scuba gear e-commerce support",
+      "Online waiver and form submission system",
+      "Analytics and reporting dashboard",
+      "Post-launch maintenance and support"
+    ],
+    "demoLinks": ["https://scubalife.net/"],
+    "githubLinks": []
+  },
+  {
+    "title": "Walkthroughz Interactive Platform",
+    "webImage": "https://res.cloudinary.com/dynsi60i4/image/upload/v1778939608/screencapture-walkthroughz-2026-05-16-19_52_59_humlnw.png",
+    "description": "An interactive digital platform focused on immersive walkthrough experiences with a modern responsive design and scalable architecture for future enhancements and integrations.",
+    "technologies": [],
+    "features": [
+      "Modern responsive UI/UX",
+      "Interactive walkthrough experience",
+      "Optimized performance and scalability",
+      "Cross-device compatibility",
+      "Future-ready architecture"
+    ],
+    "demoLinks": ["https://walkthroughz.com/"],
+    "githubLinks": []
+  }
+]

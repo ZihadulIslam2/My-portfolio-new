@@ -12,8 +12,8 @@ import Contact from './components/Contact'
 import AdminPage from './pages/AdminPage'
 import ManagePortfolio from './pages/ManagePortfolio'
 import UpdatePortfolio from './pages/EditPortfolio'
+import ProjectDetails from './pages/ProjectDetails'
 import Skills from './components/Skills'
-import Certifications from './components/Certifications'
 import Recommendations from './components/Recommendations'
 import Blog from './components/Blog'
 
@@ -46,6 +46,7 @@ const App = () => {
           />
 
           {/* Admin Page Route */}
+          <Route path="/projects/:projectTitle" element={<ProjectDetails />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/manage-portfolio" element={<ManagePortfolio />} />
           <Route path="/update-portfolio/:id" element={<UpdatePortfolio />} />
