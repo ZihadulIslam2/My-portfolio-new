@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://zihadulislam.me/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Project Pages -->
+  <url>
+    <loc>https://zihadulislam.me/projects/Multi-Sector%20Booking%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778855131/screencapture-bookersi-2026-05-15-20_20_42_nsipvd.png</image:loc>
+      <image:title>Multi-Sector Booking Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/HierroMarket%20Custom%20eCommerce%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778855592/screencapture-hierroamedida-2026-05-15-20_32_17_wz8y5n.png</image:loc>
+      <image:title>HierroMarket Custom eCommerce Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/Board%20Games%20E-Commerce%20Website%20%26%20Dynamic%20QR%20Code%20Integration</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778855960/screencapture-doundogames-2026-05-15-20_38_55_vgskmy.png</image:loc>
+      <image:title>Board Games E-Commerce Website &amp; Dynamic QR Code Integration</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/Live%20Event%20Audience%20Interaction%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778926433/screencapture-lfstactivation-cloud-2026-05-16-16_12_01_luvai2.png</image:loc>
+      <image:title>Live Event Audience Interaction Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/B2B2C%20Fundraising%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778938592/screencapture-merchraiser-2026-05-16-19_36_02_czjlxn.png</image:loc>
+      <image:title>B2B2C Fundraising Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/Open%20Water%20Diver%20Booking%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778938931/screencapture-scubalife-net-2026-05-16-19_41_52_bg4tgy.png</image:loc>
+      <image:title>Open Water Diver Booking Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://zihadulislam.me/projects/Walkthroughz%20Interactive%20Platform</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dynsi60i4/image/upload/v1778939608/screencapture-walkthroughz-2026-05-16-19_52_59_humlnw.png</image:loc>
+      <image:title>Walkthroughz Interactive Platform</image:title>
+    </image:image>
+  </url>
+
+</urlset>

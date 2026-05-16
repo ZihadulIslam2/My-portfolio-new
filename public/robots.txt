@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /manage-portfolio
+Disallow: /update-portfolio/
+
+# Crawl delay (optional - prevents server overload)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://zihadulislam.me/sitemap.xml
