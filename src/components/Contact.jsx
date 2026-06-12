@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { Mail, Github, Linkedin } from 'lucide-react'
 import { useState } from 'react'
-import { appwriteService } from '../services/appwriteService'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -18,20 +18,45 @@ const Contact = () => {
     setLoading(true)
     setStatus({ type: '', message: '' })
 
-    try {
-      const result = await appwriteService.sendMessage(formData);
+    // These should ideally be in your .env file
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-      if (result.success) {
-        setStatus({ type: 'success', message: result.message })
+    // Check if keys are provided
+    if (!serviceId || !templateId || !publicKey) {
+      console.warn('EmailJS keys are missing. Please add them to your .env file.')
+      // For now, I'll let it proceed but it will fail if not set. 
+      // Or I can provide a more helpful error.
+    }
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_name: 'Zihadul Islam', // You can change this
+        message: formData.message,
+      }
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      )
+
+      if (response.status === 200) {
+        setStatus({
+          type: 'success',
+          message: 'Message sent successfully! I will get back to you soon.',
+        })
         setFormData({ name: '', email: '', message: '' })
-      } else {
-        setStatus({ type: 'error', message: result.message })
       }
     } catch (error) {
-      console.error('Error:', error)
+      console.error('EmailJS Error:', error)
       setStatus({
         type: 'error',
-        message: 'Something went wrong. Please try again later.',
+        message: 'Failed to send message. Please try again or email me directly.',
       })
     } finally {
       setLoading(false)
@@ -152,11 +177,10 @@ const Contact = () => {
 
               {status.message && (
                 <p
-                  className={`mt-2 text-sm font-medium ${
-                    status.type === 'success'
+                  className={`mt-2 text-sm font-medium ${status.type === 'success'
                       ? 'text-green-400'
                       : 'text-red-400'
-                  }`}
+                    }`}
                 >
                   {status.message}
                 </p>
