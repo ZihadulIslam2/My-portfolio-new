@@ -3,20 +3,36 @@ import { motion } from "framer-motion";
 
 const skillsData = [
     {
-        category: "Programming Languages",
-        skills: ["JavaScript", "TypeScript", "Python", "Dart", "HTML / CSS"],
+        category: "Languages",
+        skills: ["JavaScript (ES6+)", "TypeScript", "Python", "C", "C++", "Go"],
     },
     {
         category: "Frontend",
-        skills: ["React", "Next.js", "React Native", "Tailwind CSS", "Framer Motion", "Flutter"],
+        skills: ["React.js", "Next.js", "React Native", "Redux Toolkit", "Tailwind CSS", "HTML5", "CSS3"],
     },
     {
         category: "Backend",
-        skills: ["Node.js", "Express.js", "Appwrite", "Firebase", "REST APIs", "Fast API"],
+        skills: ["Node.js", "Express.js", "NestJS", "FastAPI", "Gin", "Socket.IO", "JWT", "REST APIs", "FFmpeg (Video HLS)"],
     },
     {
-        category: "Database & Tools",
-        skills: ["MongoDB", "PostgreSQL", "Git", "Docker"],
+        category: "Testing",
+        skills: ["Jest", "Supertest", "Unit Testing", "Integration Testing"],
+    },
+    {
+        category: "Databases",
+        skills: ["MongoDB", "Mongoose", "PostgreSQL", "MySQL", "Redis"],
+    },
+    {
+        category: "DevOps & Cloud",
+        skills: ["Git", "Docker", "Nginx", "PM2", "Linux", "VPS Management", "Cloud Deployment", "CI/CD", "GitHub Actions"],
+    },
+    {
+        category: "Integrations",
+        skills: ["Stripe", "PayPal", "Braintree", "Google Maps API"],
+    },
+    {
+        category: "AI/LLM Exposure",
+        skills: ["OpenAI API", "LLM Integrations", "Vector Database Basics", "AI Automation Workflows"],
     },
 ];
 

@@ -72,10 +72,6 @@ export const Explorations: React.FC = () => {
                 <p className="text-muted max-w-sm mb-8">
                     A deep dive into experimental projects and creative fragments.
                 </p>
-                <button className="group relative rounded-full px-8 py-3 bg-surface border border-stroke text-sm text-text-primary transition-all hover:border-transparent">
-                    <span className="absolute inset-0 rounded-full p-[1px] hidden group-hover:block accent-gradient -z-10" />
-                    View on Dribbble
-                </button>
             </div>
 
             {/* Layer 2: Parallax Columns */}

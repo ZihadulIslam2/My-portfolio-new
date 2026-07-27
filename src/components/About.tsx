@@ -32,7 +32,7 @@ export const About: React.FC = () => {
                             className="absolute -bottom-6 -right-6 bg-text-primary text-bg px-8 py-4 rounded-2xl shadow-2xl z-20"
                         >
                             <span className="font-display italic text-xl">Zihadul Islam</span>
-                            <p className="text-[10px] uppercase tracking-[0.2em] mt-1 opacity-70">Based in Dhaka</p>
+                            {/* <p className="text-[10px] uppercase tracking-[0.2em] mt-1 opacity-70">Based in Dhaka</p> */}
                         </motion.div>
                     </motion.div>
 

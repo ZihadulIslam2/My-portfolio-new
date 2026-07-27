@@ -8,12 +8,16 @@ import { Footer } from "../components/Footer";
 import { ContactForm } from "../components/ContactForm";
 import { SkillsSection } from "../components/SkillsSection";
 import { About } from "../components/About";
+import { Education } from "../components/Education";
+import { Experience } from "../components/Experience";
 
 export const Home: React.FC = () => {
     return (
         <main className="relative">
             <Hero />
             <About />
+            <Education />
+            <Experience />
             <SelectedWorks />
             <SkillsSection />
             <Journal />

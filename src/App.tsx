@@ -5,6 +5,8 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Home } from "./pages/Home";
 import ProjectDetails from "./pages/ProjectDetails";
 import { ProjectsPage } from "./pages/ProjectsPage";
+import { JournalPage } from "./pages/JournalPage";
+import { JournalDetailsPage } from "./pages/JournalDetailsPage";
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +49,8 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:projectTitle" element={<ProjectDetails />} />
+            <Route path="/journal" element={<JournalPage />} />
+            <Route path="/journal/:slug" element={<JournalDetailsPage />} />
           </Routes>
         </AnimatePresence>
       )}
