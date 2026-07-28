@@ -130,10 +130,10 @@ export const Education: React.FC = () => {
                             Certifications
                         </h3>
 
-                        {certificationsData.map((cert) => (
+                        {certificationsData.map((cert, index) => (
                             <div
                                 key={cert.title}
-                                className="bg-surface border border-stroke rounded-[2rem] p-8 hover:border-accent/20 transition-all duration-500"
+                                className={`bg-surface border border-stroke rounded-[2rem] p-8 hover:border-accent/20 transition-all duration-500 ${index < certificationsData.length - 1 ? 'mb-6' : ''}`}
                             >
                                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                                     <div>

@@ -5,12 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const explorations = [
-    { id: 1, image: "/images/automotive_motion_project_1781351413236.png", rotate: "-6deg" },
-    { id: 2, image: "/images/urban_architecture_project_1781351425622.png", rotate: "4deg" },
-    { id: 3, image: "/images/human_perspective_project_1781351436816.png", rotate: "-2deg" },
-    { id: 4, image: "/images/brand_identity_project_1781351448225.png", rotate: "8deg" },
-    { id: 5, image: "/images/journal_entry_1_1781351497509.png", rotate: "-4deg" },
-    { id: 6, image: "/images/journal_entry_2_1781351509389.png", rotate: "5deg" },
+    { id: 1, image: "/images/AI & Machine Learning.jpg", rotate: "-6deg" },
+    { id: 2, image: "/images/Cloud & DevOps.jpg", rotate: "4deg" },
+    { id: 3, image: "/images/Cybersecurity.jpg", rotate: "-2deg" },
+    { id: 4, image: "/images/Data Engineering.jpg", rotate: "8deg" },
+    { id: 5, image: "/images/Software Development.jpg", rotate: "-4deg" },
+    { id: 6, image: "/images/Web Technologies.jpg", rotate: "5deg" },
 ];
 
 export const Explorations: React.FC = () => {
